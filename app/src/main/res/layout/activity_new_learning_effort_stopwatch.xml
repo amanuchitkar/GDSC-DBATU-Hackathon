@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/learningEffortStopwatchConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    tools:context=".ui.NewLearningEffortStopwatch">
+
+    <ImageButton
+        android:id="@+id/newLearningEffortStopwatchBackButton"
+        style="@style/StandardButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/backButton"
+        android:onClick="backButtonClicked"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarInclude"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <include
+        android:id="@+id/toolbarInclude"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addLearningEffortStopwatchButton"
+        style="@style/StandardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="saveLearningEffortButtonClicked"
+        android:text="@string/add_learning_effort"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopStopwatchButton" />
+
+    <Button
+        android:id="@+id/startStopwatchButton"
+        style="@style/StandardButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="startStopwatchButtonClicked"
+        android:text="@string/start_timer"
+        app:layout_constraintEnd_toStartOf="@+id/stopStopwatchButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learningEffortStopwatchChronometer" />
+
+    <Button
+        android:id="@+id/stopStopwatchButton"
+        style="@style/StandardButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="stopStopwatchButtonClicked"
+        android:text="@string/stop_timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/startStopwatchButton"
+        app:layout_constraintTop_toBottomOf="@+id/learningEffortStopwatchChronometer" />
+
+    <Chronometer
+        android:id="@id/learningEffortStopwatchChronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/black_selected"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learningEffortCurrentTextView" />
+
+    <TextView
+        android:id="@+id/learningUnitTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:textColor="@color/black_selected"
+        android:maxLines="1"
+        android:text="@string/string_placeholder"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newLearningEffortStopwatchBackButton" />
+
+    <TextView
+        android:id="@+id/learningEffortPlannedTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:textColor="@color/black_selected"
+        android:maxLines="1"
+        android:text="@string/planned_dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learningUnitTitleTextView" />
+
+    <TextView
+        android:id="@+id/learningEffortCurrentTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:textColor="@color/black_selected"
+        android:maxLines="1"
+        android:text="@string/current_dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learningEffortPlannedTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

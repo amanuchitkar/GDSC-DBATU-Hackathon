@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "968353065834",
+    "project_id": "psp1-f5337",
+    "storage_bucket": "psp1-f5337.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968353065834:android:902c64867f079ed03f1313",
+        "android_client_info": {
+          "package_name": "com.example.psp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5TPQdMEE1Te4K1OBjdicIhaHgRE11h0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
